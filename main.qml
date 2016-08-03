@@ -61,6 +61,7 @@ ApplicationWindow {
 
             MenuItem {
                 text: qsTr("Exit")
+                shortcut: "Ctrl+E"
                 onTriggered: Qt.quit();
             }
         }
@@ -127,29 +128,7 @@ ApplicationWindow {
 
                 TableViewColumn {
                     title: "Name"
-                    role: "fileName"
-                    resizable: true
-                }
-
-                TableViewColumn {
-                    title: "Size"
-                    role: "size"
-                    resizable: true
-                    horizontalAlignment : Text.AlignRight
-                    width: 70
-                }
-
-                TableViewColumn {
-                    title: "Permissions"
-                    role: "displayableFilePermissions"
-                    resizable: true
-                    width: 100
-                }
-
-                TableViewColumn {
-                    title: "Date Modified"
-                    role: "lastModified"
-                    resizable: true
+                    role: "fileName" 
                 }
 
                 onActivated : {
